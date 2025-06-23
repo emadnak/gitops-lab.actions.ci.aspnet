@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      configuration: release
 
     steps:
       # Checkout all sources from git
