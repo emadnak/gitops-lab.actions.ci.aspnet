@@ -1,5 +1,4 @@
 name: Build-and-Test
- 
 on:
   push:
     branches: [ main ]
@@ -17,6 +16,7 @@ steps:
   uses: actions/setup-dotnet@v1
   with:
     dotnet-version: 8.0.x
+
 # restore NuGet packages
 - name: Restore dependencies
   run: dotnet restore
