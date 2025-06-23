@@ -26,9 +26,13 @@ jobs:
         run: dotnet restore
 
       # Build the project
+      #- name: Build
+      #  run: dotnet build --no-restore
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build --no-restore  --configuration ${{ env.configuration }}
+      - name: Test
+        run: dotnet test --no-build --verbosity normal --configuration ${{ env.configuration }}
 
       # Run tests
-      - name: Test
+      #- name: Test
         run: dotnet test --no-build --verbosity normal
