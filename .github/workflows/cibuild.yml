@@ -32,7 +32,6 @@ jobs:
         run: dotnet build --no-restore  --configuration ${{ env.configuration }}
       - name: Test
         run: dotnet test --no-build --verbosity normal --configuration ${{ env.configuration }}
-
       # Run tests
       #- name: Test
-        run: dotnet test --no-build --verbosity normal
+      #  run: dotnet test --no-build --verbosity normal
